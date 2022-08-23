@@ -1,10 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2E7DC;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #4E666C;
+  text-align: center;
+  padding: 0 1vw 0.5vh;
+}
+
+.line-1 {
+  width: 80vw;
+  height: 2px;
+  background-color: #A4B5A9;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sitemap {
+  display: flex;
+  justify-content: center;
+}
+
+#landing-container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 45% 2% 0;
+}
+
+#sitemap {
+  padding-top: 1vh;
+  padding-bottom: 30%;
+  text-align: center;
+}
+#sitemap li {
+  font-family: "Playfair Display", serif;
   color: #4E666C;
+  text-decoration: none;
+  list-style: none;
+  font-size: 2em;
+  padding: 0.5vh;
+}
+#sitemap a:link, #sitemap a:visited {
+  color: #4E666C;
+  text-decoration: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+footer .logo-container {
+  bottom: 1%;
+  left: 1%;
+  display: flex;
+  justify-content: center;
+  width: 98%;
+}
+footer .logo-container .logos {
+  width: 2em;
+  margin-left: 10px;
+}
+footer p {
+  font-family: "Playfair Display", serif;
+  color: #4E666C;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
