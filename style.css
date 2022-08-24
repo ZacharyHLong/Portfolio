@@ -12,6 +12,13 @@ body {
   min-height: 100vh;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  min-height: 100vh;
+}
+
 h1 {
   font-family: "Raleway", sans-serif;
   font-size: 3.5em;
@@ -30,7 +37,7 @@ h1 {
   margin-right: auto;
 }
 
-#landing-container {
+.landing-container {
   display: flex;
   flex-flow: column wrap;
   padding: 20vh 2% 20vh;
@@ -62,13 +69,15 @@ h1 {
 }
 
 nav {
+  position: sticky;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  position: fixed;
   top: 0;
+  background-color: #F2E7DC;
+  z-index: 100;
   width: 100%;
-  padding: 0.5vh 10vw 1vh 10vw;
+  padding: 0.5vh 10vw 0 10vw;
 }
 nav h2 {
   display: block;
@@ -96,7 +105,7 @@ nav li {
   font-size: 5vw;
 }
 nav .line-2 {
-  width: 80vw;
+  width: 85vw;
   height: 2px;
   background-color: #A4B5A9;
   position: relative;
@@ -109,25 +118,10 @@ nav a:link, nav a:visited {
 }
 
 footer {
-  position: absolute;
-  bottom: 2%;
-  left: 50%;
+  padding: 4vh 0 1vh;
   width: 100%;
-  transform: translate(-50%, 0%);
-}
-footer .logo-container {
-  bottom: 1%;
-  left: 1%;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-footer .logo-container .logos {
-  width: 2em;
-  margin-left: 10px;
-}
-footer .logo-container .logos:hover {
-  transform: scale(1.1);
+  margin-top: auto;
+  flex-shrink: 0;
 }
 footer p {
   font-family: "Playfair Display", serif;
@@ -135,17 +129,70 @@ footer p {
   text-align: center;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.logo-container .logos {
+  width: 2em;
+  margin-left: 10px;
+}
+.logo-container .logos:hover {
+  transform: scale(1.1);
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 2vw 10vw;
+}
+
+#headshot {
+  border-radius: 50%;
+  size: 10vw;
+  width: 50%;
+  height: auto;
+}
+
+h3, h4 {
+  font-family: "Playfair Display", serif;
+  color: #4E666C;
+  font-size: large;
+}
+
+h4 {
+  padding: 6vh 25vw 0vh;
+  text-align: center;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  color: #4E666C;
+  padding-bottom: 2vh;
+}
+
+@media screen and (min-width: 650px) {
+  nav h2 {
+    font-size: 56px;
+  }
+  nav li {
+    font-size: 32.5px;
+    padding: 0 16.5px 6.5px;
+  }
+}
 @media screen and (min-width: 900px) {
-  #landing-container h1 {
+  .landing-container h1 {
     font-size: 6vw;
   }
-  #landing-container ul {
+  .landing-container ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: space-between;
   }
-  #landing-container ul li {
+  .landing-container ul li {
     margin: 0 4vw 0;
     font-size: 4vw;
   }
