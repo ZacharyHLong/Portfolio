@@ -61,9 +61,7 @@ h1 {
         font-size: 2em;
         padding: .5vh;
     }
-    li:hover {
-        transform: scale(1.2);
-    }
+    
     a:link, a:visited {
         color: $primary-text-color;
         text-decoration: none;
@@ -78,6 +76,15 @@ h1 {
     font-size: larger;
 }
 
+.other-page:hover {
+    transform: scale(1.2);
+}
+
+.current-page {
+    color: $accent-color;
+    text-decoration: underline;
+}
+
 nav {
     display: flex;
     flex-flow: column wrap;
@@ -90,20 +97,25 @@ nav {
         display: block;
         text-decoration: none;
         font-family: 'Raleway', sans-serif;
-        font-size: 2em;
+        font-size: 8vw;
         font-weight: 700;
         text-align: center;
         color: $primary-text-color;
-        width: 100%
+        width: 100%;
     }
     ul {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         align-content: space-between;
+        text-align: center;
         text-decoration: none;
         list-style: none;
         @include basic-font();
-        padding: .5vw;
+    }
+    li {
+        padding: 0 2.5vw 1vw;
+        flex: 1;
+        font-size: 5vw;
     }
     .line-2 {
         width: 80vw;
@@ -149,7 +161,7 @@ footer{
 @media screen and (min-width: 900px) {
     #landing-container {
         h1 {
-            font-size: 8vw;
+            font-size: 6vw;
         }
         ul {
             display: flex;
@@ -158,7 +170,7 @@ footer{
             align-content: space-between;
             li {
                 margin: 0 4vw 0;
-                font-size: 7vw;
+                font-size: 4vw;
             }
         }
     }
