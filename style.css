@@ -33,12 +33,11 @@ h1 {
 #landing-container {
   display: flex;
   flex-flow: column wrap;
-  padding: 35% 2% 0;
+  padding: 20vh 2% 20vh;
 }
 
 #sitemap {
   padding-top: 1vh;
-  padding-bottom: 30%;
   text-align: center;
 }
 #sitemap li {
@@ -49,15 +48,27 @@ h1 {
   font-size: 2em;
   padding: 0.5vh;
 }
+#sitemap li:hover {
+  transform: scale(1.2);
+}
 #sitemap a:link, #sitemap a:visited {
   color: #4E666C;
   text-decoration: none;
+}
+
+#landing-comment {
+  display: none;
+  color: #4E666C;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: larger;
 }
 
 footer {
   position: absolute;
   bottom: 2%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, 0%);
 }
 footer .logo-container {
@@ -65,11 +76,14 @@ footer .logo-container {
   left: 1%;
   display: flex;
   justify-content: center;
-  width: 98%;
+  width: 100%;
 }
 footer .logo-container .logos {
   width: 2em;
   margin-left: 10px;
+}
+footer .logo-container .logos:hover {
+  transform: scale(1.1);
 }
 footer p {
   font-family: "Playfair Display", serif;
@@ -79,7 +93,7 @@ footer p {
 
 @media screen and (min-width: 900px) {
   h1 {
-    font-size: 9vw;
+    font-size: 8vw;
   }
   ul {
     display: flex;
@@ -90,6 +104,9 @@ footer p {
   ul li {
     margin: 0 4vw 0;
     font-size: 7vw;
+  }
+  #landing-comment {
+    display: block;
   }
 }
 

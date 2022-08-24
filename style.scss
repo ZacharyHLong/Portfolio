@@ -48,12 +48,11 @@ h1 {
 #landing-container {
     display: flex;
     flex-flow: column wrap;
-    padding: 35% 2% 0;
+    padding: 20vh 2% 20vh;
 }
 
 #sitemap {
     padding-top: 1vh;
-    padding-bottom: 30%;
     text-align: center;
     li {
         @include basic-font ();
@@ -62,26 +61,41 @@ h1 {
         font-size: 2em;
         padding: .5vh;
     }
+    li:hover {
+        transform: scale(1.2);
+    }
     a:link, a:visited {
         color: $primary-text-color;
         text-decoration: none;
     }
 }
 
+#landing-comment {
+    display: none;
+    color: $primary-text-color;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: larger;
+}
+
 footer{
     position: absolute;
     bottom: 2%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, 0%);
     .logo-container {
         bottom: 1%;
         left: 1%;
         display: flex;
         justify-content: center;
-        width: 98%;
+        width: 100%;
         .logos {
             width: 2em;
             margin-left: 10px;
+        }
+        .logos:hover {
+            transform: scale(1.1)
         }
     }
     p {
@@ -92,7 +106,7 @@ footer{
 
 @media screen and (min-width: 900px) {
     h1 {
-        font-size: 9vw;
+        font-size: 8vw;
     }
     ul {
         display: flex;
@@ -103,5 +117,8 @@ footer{
             margin: 0 4vw 0;
             font-size: 7vw;
         }
+    }
+    #landing-comment {
+        display: block;
     }
 }
