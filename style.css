@@ -61,15 +61,6 @@ h1 {
   font-size: larger;
 }
 
-.other-page:hover {
-  transform: scale(1.2);
-}
-
-.current-page {
-  color: #A4B5A9;
-  text-decoration: underline;
-}
-
 nav {
   display: flex;
   flex-flow: column wrap;
@@ -161,6 +152,14 @@ footer p {
   #landing-comment {
     display: block;
   }
+}
+.other-page:hover {
+  transform: scale(1.2);
+}
+
+.current-page {
+  text-decoration: underline;
+  color: #6A7B80;
 }
 
 /*# sourceMappingURL=style.css.map */

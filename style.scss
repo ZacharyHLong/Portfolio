@@ -76,15 +76,6 @@ h1 {
     font-size: larger;
 }
 
-.other-page:hover {
-    transform: scale(1.2);
-}
-
-.current-page {
-    color: $accent-color;
-    text-decoration: underline;
-}
-
 nav {
     display: flex;
     flex-flow: column wrap;
@@ -177,4 +168,21 @@ footer{
     #landing-comment {
         display: block;
     }
+}
+
+
+
+
+
+
+
+
+// animations
+.other-page:hover {
+    transform: scale(1.2);
+}
+
+.current-page {
+    text-decoration: underline;
+    color: $secondary-text-color;
 }
