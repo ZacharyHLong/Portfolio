@@ -64,6 +64,48 @@ h1 {
   font-size: larger;
 }
 
+nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5vh 10vw 1vh 10vw;
+}
+nav h2 {
+  display: block;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  color: #4E666C;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Playfair Display", serif;
+  color: #4E666C;
+  padding: 0.5vw;
+}
+nav .line-2 {
+  width: 80vw;
+  height: 2px;
+  background-color: #A4B5A9;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav a:link, nav a:visited {
+  color: #4E666C;
+  text-decoration: none;
+}
+
 footer {
   position: absolute;
   bottom: 2%;
@@ -92,16 +134,16 @@ footer p {
 }
 
 @media screen and (min-width: 900px) {
-  h1 {
+  #landing-container h1 {
     font-size: 8vw;
   }
-  ul {
+  #landing-container ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: space-between;
   }
-  ul li {
+  #landing-container ul li {
     margin: 0 4vw 0;
     font-size: 7vw;
   }
