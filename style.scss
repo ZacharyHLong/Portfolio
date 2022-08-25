@@ -154,7 +154,6 @@ footer {
     width: 100%;
     margin-top: auto;
     flex-shrink: 0;
-
     p {
         @include basic-font();
         text-align: center;
@@ -261,6 +260,7 @@ h5 {
             max-height: 300px;
             max-width: auto;
             float: right;
+            padding: .5vh 0 .5vh .5vh;
         }
     }
 
