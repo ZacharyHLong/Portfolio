@@ -4,7 +4,7 @@
 // font-family: 'Playfair Display', serif;
 // font-family: 'Raleway', sans-serif;
 
-$primary-bg-color : #ffffff;
+$primary-bg-color : #F2E7DC;
 $primary-text-color : #4E666C;
 $secondary-text-color : #6A7B80;
 $accent-color: #A4B5A9;
@@ -30,6 +30,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     align-content: space-between;
     min-height: 100vh;
 }
@@ -45,6 +46,13 @@ h1 {
 
 
 //landing elements
+// #background-graphic {
+//     filter: invert(85%) sepia(18%) saturate(277%) hue-rotate(349deg) brightness(88%) contrast(88%) opacity(20%);
+//     z-index: 1;
+//     position: relative;
+//     top: -10vh;
+// }
+
 .line-1 {
     width: 80vw;
     height: 2px;
@@ -95,7 +103,7 @@ nav {
     background-color: $primary-bg-color;
     z-index: 100;
     width: 100%;
-    padding: .5vh 10vw 0 10vw;
+    padding: .5vh 7.5vw 0;
     h2 {
         display: block;
         text-decoration: none;
@@ -122,9 +130,10 @@ nav {
     }
     .line-2 {
         width: 85vw;
+        max-width: 1156px;
         height: 2px;
         background-color: $accent-color;
-        position: relative;
+        // position: relative;
         margin-left: auto;
         margin-right: auto;
     }
@@ -168,6 +177,11 @@ footer {
     flex-flow: column wrap;
     padding: 2vw 10vw;
 }
+.article-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
 #headshot {
     border-radius: 50%;
     size: 10vw;
@@ -190,7 +204,38 @@ p {
     padding-bottom: 2vh;
 }
 
+.big-logo {
+    width: 4em;
+    
+}
+.big-logo:hover {
+    transform: scale(1.1);
+}
 
+//blog elements
+.main-blog-wrapper {
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 85vw;
+    max-width: 1028px;
+    .blog-article {
+        display: flex;
+        flex-flow: column wrap;
+        img {
+            max-width: 85vw;
+            flex: 1
+        }
+    }
+}
+
+.line-3 {
+    width: 85vw;
+    max-width: 1156px;
+    height: 2px;
+    background-color: $accent-color;
+    margin-bottom: 3vh;
+}
 
 //breakpoints
 @media screen and (min-width: 650px) {
@@ -228,10 +273,6 @@ p {
     }
 }
 
-
-
-
-
 // animations
 .other-page:hover {
     transform: scale(1.2);
@@ -241,3 +282,8 @@ p {
     text-decoration: underline;
     color: $secondary-text-color;
 }
+
+
+
+
+//max-width: 1028px; for blogs

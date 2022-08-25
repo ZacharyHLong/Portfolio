@@ -15,6 +15,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   align-content: space-between;
   min-height: 100vh;
 }
@@ -77,7 +78,7 @@ nav {
   background-color: #F2E7DC;
   z-index: 100;
   width: 100%;
-  padding: 0.5vh 10vw 0 10vw;
+  padding: 0.5vh 7.5vw 0;
 }
 nav h2 {
   display: block;
@@ -106,9 +107,9 @@ nav li {
 }
 nav .line-2 {
   width: 85vw;
+  max-width: 1156px;
   height: 2px;
   background-color: #A4B5A9;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,6 +150,12 @@ footer p {
   padding: 2vw 10vw;
 }
 
+.article-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 #headshot {
   border-radius: 50%;
   size: 10vw;
@@ -171,6 +178,38 @@ p {
   font-family: "Playfair Display", serif;
   color: #4E666C;
   padding-bottom: 2vh;
+}
+
+.big-logo {
+  width: 4em;
+}
+
+.big-logo:hover {
+  transform: scale(1.1);
+}
+
+.main-blog-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 85vw;
+  max-width: 1028px;
+}
+.main-blog-wrapper .blog-article {
+  display: flex;
+  flex-flow: column wrap;
+}
+.main-blog-wrapper .blog-article img {
+  max-width: 85vw;
+  flex: 1;
+}
+
+.line-3 {
+  width: 85vw;
+  max-width: 1156px;
+  height: 2px;
+  background-color: #A4B5A9;
+  margin-bottom: 3vh;
 }
 
 @media screen and (min-width: 650px) {
