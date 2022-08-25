@@ -8,6 +8,7 @@ $primary-bg-color : #F2E7DC;
 $primary-text-color : #4E666C;
 $secondary-text-color : #6A7B80;
 $accent-color: #A4B5A9;
+$strong-accent-color: #5D8267;
 
 @mixin basic-font {
     font-family: 'Playfair Display', serif;
@@ -47,10 +48,10 @@ h1 {
 
 //landing elements
 // #background-graphic {
-//     filter: invert(85%) sepia(18%) saturate(277%) hue-rotate(349deg) brightness(88%) contrast(88%) opacity(20%);
+//     filter: invert(37%) sepia(14%) saturate(625%) hue-rotate(189deg) brightness(96%) contrast(96%) opacity(20%);
 //     z-index: 1;
-//     position: relative;
-//     top: -10vh;
+//     position: fixed;
+//     transform: translate(-8%, -10%);
 // }
 
 .line-1 {
@@ -80,7 +81,7 @@ h1 {
     }
     
     a:link, a:visited {
-        color: $primary-text-color;
+        color: $strong-accent-color;
         text-decoration: none;
     }
 }
@@ -95,7 +96,6 @@ h1 {
 
 //navigation
 nav {
-    position: sticky;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -141,6 +141,10 @@ nav {
         color: $primary-text-color;
         text-decoration: none;
     }
+}
+
+#sticky-nav {
+    position: sticky;
 }
 
 
@@ -189,19 +193,20 @@ footer {
     height: auto;
 }
 
-h3, h4 {
+h3 {
     @include basic-font ();
     font-size: large;
+    padding: 1vh 0 0;
 }
-
 h4 {
+    @include basic-font ();
     padding: 6vh 25vw 0vh;
     text-align: center;
 }
 
 p {
     @include basic-font ();
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
 }
 
 .big-logo {
@@ -220,21 +225,24 @@ p {
     width: 85vw;
     max-width: 1028px;
     .blog-article {
-        display: flex;
-        flex-flow: column wrap;
         img {
-            max-width: 85vw;
-            flex: 1
+            max-width: 60vw;
+            border-radius: 0.2rem;
         }
     }
 }
 
+h5 {
+    @include basic-font ();
+     opacity: 90%;
+}
+
 .line-3 {
     width: 85vw;
-    max-width: 1156px;
+    max-width: 1028px;
     height: 2px;
     background-color: $accent-color;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
 }
 
 //breakpoints
@@ -248,6 +256,14 @@ p {
             padding: 0 16.5px 6.5px; 
         }
     }
+    .blog-article {
+        img {
+            max-height: 300px;
+            max-width: auto;
+            float: right;
+        }
+    }
+
 }
 
 
@@ -269,7 +285,7 @@ p {
         }
     }
     #landing-comment {
-        display: block;
+        // display: block;
     }
 }
 

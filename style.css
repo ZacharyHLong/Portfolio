@@ -57,7 +57,7 @@ h1 {
   padding: 0.5vh;
 }
 #sitemap a:link, #sitemap a:visited {
-  color: #4E666C;
+  color: #5D8267;
   text-decoration: none;
 }
 
@@ -70,7 +70,6 @@ h1 {
 }
 
 nav {
-  position: sticky;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -118,6 +117,10 @@ nav a:link, nav a:visited {
   text-decoration: none;
 }
 
+#sticky-nav {
+  position: sticky;
+}
+
 footer {
   padding: 4vh 0 1vh;
   width: 100%;
@@ -163,13 +166,16 @@ footer p {
   height: auto;
 }
 
-h3, h4 {
+h3 {
   font-family: "Playfair Display", serif;
   color: #4E666C;
   font-size: large;
+  padding: 1vh 0 0;
 }
 
 h4 {
+  font-family: "Playfair Display", serif;
+  color: #4E666C;
   padding: 6vh 25vw 0vh;
   text-align: center;
 }
@@ -177,7 +183,7 @@ h4 {
 p {
   font-family: "Playfair Display", serif;
   color: #4E666C;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
 }
 
 .big-logo {
@@ -195,21 +201,23 @@ p {
   width: 85vw;
   max-width: 1028px;
 }
-.main-blog-wrapper .blog-article {
-  display: flex;
-  flex-flow: column wrap;
-}
 .main-blog-wrapper .blog-article img {
-  max-width: 85vw;
-  flex: 1;
+  max-width: 60vw;
+  border-radius: 0.2rem;
+}
+
+h5 {
+  font-family: "Playfair Display", serif;
+  color: #4E666C;
+  opacity: 90%;
 }
 
 .line-3 {
   width: 85vw;
-  max-width: 1156px;
+  max-width: 1028px;
   height: 2px;
   background-color: #A4B5A9;
-  margin-bottom: 3vh;
+  margin-bottom: 1vh;
 }
 
 @media screen and (min-width: 650px) {
@@ -219,6 +227,11 @@ p {
   nav li {
     font-size: 32.5px;
     padding: 0 16.5px 6.5px;
+  }
+  .blog-article img {
+    max-height: 300px;
+    max-width: auto;
+    float: right;
   }
 }
 @media screen and (min-width: 900px) {
@@ -234,9 +247,6 @@ p {
   .landing-container ul li {
     margin: 0 4vw 0;
     font-size: 4vw;
-  }
-  #landing-comment {
-    display: block;
   }
 }
 .other-page:hover {
