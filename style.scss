@@ -268,7 +268,7 @@ h5 {
 
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 760px) {
     .landing-container {
         h1 {
             font-size: 6vw;
@@ -280,7 +280,7 @@ h5 {
             align-content: space-between;
             li {
                 margin: 0 4vw 0;
-                font-size: 4vw;
+                font-size: 5vw;
             }
         }
     }
@@ -298,8 +298,3 @@ h5 {
     text-decoration: underline;
     color: $secondary-text-color;
 }
-
-
-
-
-//max-width: 1028px; for blogs
