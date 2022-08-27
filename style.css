@@ -245,6 +245,12 @@ p {
   width: 85vw;
   max-width: 1028px;
 }
+.main-blog-wrapper h3 {
+  font-size: x-large;
+}
+.main-blog-wrapper h5 {
+  margin-bottom: 0.5vh;
+}
 .main-blog-wrapper .blog-article img {
   max-width: 60vw;
   border-radius: 0.5rem;
