@@ -266,6 +266,9 @@ p {
     @include flexy-col-wrap();
     width: 85vw;
     max-width: 1028px;
+    h3 {
+        font-size: x-large;
+    }
     .blog-article {
         img {
             max-width: 60vw;
