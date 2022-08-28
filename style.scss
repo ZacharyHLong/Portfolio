@@ -118,10 +118,12 @@ h1 {
 nav {
     @include flexy-col-wrap();
     flex-wrap: nowrap;
-    top: 0;
+    // top: 0;
     background-color: $primary-bg-color;
     z-index: 100;
     width: 100%;
+    min-height: 82px;
+    max-height: 125px;
     padding: .5vh 7.5vw 0;
     h2 {
         text-decoration: none;
@@ -142,13 +144,13 @@ nav {
         font-family: 'Playfair Display', serif;
     }
     li {
-        font-size: 6vw;
-        padding: 0 2vw 1vh
+        font-size: 5vw;
+        padding: 0 2.5vw .5vh
     }
 
     .nav-graphic-box { 
         width: 100%;
-        max-width: 70vw;
+        max-width: 1400px;
         overflow: hidden; 
         position: absolute;
         z-index: -1;  
@@ -179,7 +181,7 @@ nav {
 }
 
 #sticky-nav {
-    position: sticky;
+    position: fixed;
 }
 
 
@@ -222,7 +224,8 @@ footer {
     @include flexy-col-wrap();
     #headshot {
         border-radius: 50%;
-        width: 80%;
+        width: 40vw;
+        max-width: 250px;
         height: auto;
         box-shadow: 1px 1px 1px 1px $big-text;
     }
@@ -254,11 +257,10 @@ p {
     width: 10vw;
     margin-top: 1.5vh;
     min-width: 90px;
-    max-width: 150px;
+    max-width: 130px;
 }
 .big-logo:hover {
     transform: scale(1.1);
-
 }
 
 //blog elements
@@ -275,9 +277,8 @@ p {
     .blog-article {
         img {
             max-width: 60vw;
-            border-radius: 0.2rem;
-            margin: .5rem;
-            box-shadow: 1px 1px 1px 1px $strong-accent-color;
+            margin: .5rem 0 .5rem .5rem;
+            border: 1px solid $strong-accent-color;
             }
         }
     }
@@ -331,19 +332,27 @@ h5 {
         }
 
         .text-box {
+            @include flexy-col-wrap();
+            align-items: flex-start;
             background-color: $accent-color;
             max-width: 450px;
             border-radius: 0 0 1% 1%;
+            padding-bottom: .5vh ;
             p, a {
-                margin: 2px 5px 0 5px;
+                margin: 2px 5px 0px 5px;
             }
             a {
                 text-decoration: none;
-                text-align: center;
+                align-self: center;
                 @include header-text();
+                padding-bottom: 1vh;
             }
             a:visited {
-                color: $primary-text-color;
+                color: $big-text;
+            }
+            a:hover {
+                display: inline-block;
+                transform: scale(1.1);
             }
         }
     }
@@ -354,13 +363,13 @@ h5 {
 
 
 //breakpoints
-@media screen and (max-width: 649px) {
+@media screen and (max-width: 514px) {
     .nav-graphic-box {
-        display: none;
+        display: none; 
     }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 515px) {
     nav {
         h2 {
             font-size: 56px;
@@ -431,12 +440,15 @@ h5 {
     .main-about-wrapper {
         flex-flow: row nowrap;
         justify-content: flex-start;
+        max-width: 95vw;
+        .article-wrapper {
+            max-width: 780px;
+        }
         .headshot-container {
-            width: max-content;
             align-items: center;
-            flex: 3 0 500px;
             #headshot {
-                transform: translateY(-25%);
+                transform: translateY(-45%);
+                margin: 3vw;
             }
         }
     }
