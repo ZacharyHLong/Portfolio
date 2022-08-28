@@ -115,7 +115,7 @@ nav li {
   padding: 0 2.5vw 0.5vh;
 }
 nav .nav-graphic-box {
-  width: 100%;
+  width: 90%;
   max-width: 1400px;
   overflow: hidden;
   position: absolute;
@@ -219,7 +219,7 @@ h3 {
 h4 {
   font-family: "Raleway", sans-serif;
   color: #4E666C;
-  padding: 6vh 0 0.5vh;
+  padding: 2vh 0 0.5vh;
   text-align: center;
 }
 
@@ -244,6 +244,7 @@ p {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  margin-top: 125px;
   width: 85vw;
   max-width: 1028px;
 }
@@ -343,6 +344,12 @@ h5 {
 @media screen and (max-width: 514px) {
   .nav-graphic-box {
     display: none;
+  }
+  #sticky-nav {
+    position: relative;
+  }
+  .main-blog-wrapper {
+    margin-top: auto;
   }
 }
 @media screen and (min-width: 515px) {

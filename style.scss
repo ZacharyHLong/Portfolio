@@ -15,6 +15,7 @@ $strong-accent-color: #5D8267;
     font-family: 'Open Sans', serif;
     color: $primary-text-color;
 }
+
 @mixin header-text {
     font-family: 'Raleway', sans-serif;
     color: $big-text;
@@ -25,6 +26,7 @@ $strong-accent-color: #5D8267;
     flex-flow: column wrap;
     align-items: center;
 }
+
 @mixin home2-graphic {
     filter: invert(37%) sepia(14%) saturate(625%) hue-rotate(189deg) brightness(96%) contrast(96%) opacity(5%);
     z-index: -1;
@@ -86,6 +88,7 @@ h1 {
 }
 
 #sitemap {
+    //text-component
     padding-top: 1vh;
     text-align: center;
     li {
@@ -115,10 +118,11 @@ h1 {
 }
 
 //navigation
+
 nav {
+    //graphic component & text component
     @include flexy-col-wrap();
     flex-wrap: nowrap;
-    // top: 0;
     background-color: $primary-bg-color;
     z-index: 100;
     width: 100%;
@@ -147,9 +151,8 @@ nav {
         font-size: 5vw;
         padding: 0 2.5vw .5vh
     }
-
     .nav-graphic-box { 
-        width: 100%;
+        width: 90%;
         max-width: 1400px;
         overflow: hidden; 
         position: absolute;
@@ -181,12 +184,14 @@ nav {
 }
 
 #sticky-nav {
+    //sticky nav for blog page
     position: fixed;
 }
 
 
 //footer
 footer {
+    //graphic component
     padding: 4vh 0 1vh;
     width: 100%;
     margin-top: auto;
@@ -212,7 +217,8 @@ footer {
 
 //about elements
 .main-about-wrapper {
-   @include flexy-col-wrap();
+   //graphic component and text component
+    @include flexy-col-wrap();
     padding: 2vw 10vw;
 }
 .article-wrapper {
@@ -244,7 +250,7 @@ h3 {
 h4 {
     font-family: 'Raleway', sans-serif;
     color: $primary-text-color;
-    padding: 6vh 0 .5vh;
+    padding: 2vh 0 .5vh;
     text-align: center;
 }
 
@@ -266,6 +272,7 @@ p {
 //blog elements
 .main-blog-wrapper {
     @include flexy-col-wrap();
+    margin-top: 125px;
     width: 85vw;
     max-width: 1028px;
     h3 {
@@ -275,6 +282,7 @@ p {
         margin-bottom: .5vh;
     }
     .blog-article {
+        //graphic component and text component
         img {
             max-width: 60vw;
             margin: .5rem 0 .5rem .5rem;
@@ -314,6 +322,7 @@ h5 {
         padding: .5vh;
     }
     .project-wrapper {
+        //graphic component and text component
         display: flex;
         flex-flow: column wrap;
         align-items: center;
@@ -330,7 +339,6 @@ h5 {
             background-color: $accent-color;
             border-radius: 1% 1% 0 0%;
         }
-
         .text-box {
             @include flexy-col-wrap();
             align-items: flex-start;
@@ -358,14 +366,16 @@ h5 {
     }
 }
 
-
-
-
-
 //breakpoints
 @media screen and (max-width: 514px) {
     .nav-graphic-box {
         display: none; 
+    }
+    #sticky-nav {
+        position: relative;
+    }
+    .main-blog-wrapper {
+        margin-top: auto;
     }
 }
 
